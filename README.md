@@ -38,6 +38,23 @@ docker run -d --net=demo -p 80:80 --name www nginx
 ```
 docker run --net=demo -it -e NGROK_AUTHTOKEN=xxxxxxxxxxxxxxxxx ngrok/ngrok:latest http http://www:80
 ```
+### ngrok and kubernetes
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo
+spec:
+  containers:
+    - name: ngrok
+      image: ngrok/ngrok:latest
+      env:
+        - name: NGROK_AUTHTOKEN
+          value: "xxxxxxxxxxxxxxxxxxxxxx"
+      args:
+        - http
+        - http://simple-app:80
+```
 
 ### From the docs ...
 ```
