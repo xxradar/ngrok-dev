@@ -22,7 +22,13 @@ ngrok http 80 \
   --oauth-allow-email my-user@gmail.com \
   --oauth-allow-domain example.com
 ```
+```
+ngrok http 3001 --basic-auth="katelibby:reallyrocks"
+```
 ## Some Python SDK example
+```
+export NGROK_AUTH
+```
 ```
 #!/usr/bin/env python
 
