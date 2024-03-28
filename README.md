@@ -13,7 +13,7 @@ ngrok http http://localhost:8888
 ```
 ngrok http http://localhost:8888 \
   --oauth google \
-  --oauth-allow-domain radarsec.com
+  --oauth-allow-domain kubiosec.tech
 ```
 ### From the docs ...
 ```
