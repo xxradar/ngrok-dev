@@ -27,7 +27,7 @@ ngrok http 3001 --basic-auth="katelibby:reallyrocks"
 ```
 ## Some Python SDK example
 ```
-export NGROK_AUTH ---- -  -
+xport NGROK_AUTHTOKEN=xxxxxxxxxxxxxxxxx
 ```
 ```
 #!/usr/bin/env python
