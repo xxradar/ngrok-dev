@@ -28,6 +28,17 @@ curl -u xxradar https://xxxxxxxx-ngrok-free.app/api/generate -d '{
 }'
 ```
 
+### ngrok and docker
+```
+docker network create demo
+```
+```
+docker run -d --net=demo -p 80:80 --name www nginx
+```
+```
+docker run --net=demo -it -e NGROK_AUTHTOKEN=xxxxxxxxxxxxxxxxx ngrok/ngrok:latest http http://www:80
+```
+
 ### From the docs ...
 ```
 ngrok http 80 \
