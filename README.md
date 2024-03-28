@@ -15,6 +15,19 @@ ngrok http http://localhost:8888 \
   --oauth google \
   --oauth-allow-domain kubiosec.tech
 ```
+### ollama example
+```
+ngrok http http://localhost:11434 \
+  --host-header="localhost:11434" \
+  --basic-auth="xxradar:XXXXXXXXX"
+```
+```
+curl -u xxradar https://xxxxxxxx-ngrok-free.app/api/generate -d '{
+  "model": "llama2",
+  "prompt": "Why is the sky blue?"
+}'
+```
+
 ### From the docs ...
 ```
 ngrok http 80 \
