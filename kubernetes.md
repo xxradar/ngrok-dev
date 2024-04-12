@@ -37,4 +37,25 @@ spec:
               containerPort: 80
 EOF
 ```
+```
+kubectl apply -f - <<EOF
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: game-2048
+spec:
+  ingressClassName: ngrok
+  rules:
+    - host: $NGROK_DOMAIN
+      http:
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+          service:
+            name: game-2048
+            port:
+              number: 80
+EOF
+```
 
