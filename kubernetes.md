@@ -38,6 +38,9 @@ spec:
 EOF
 ```
 ```
+export NGROK_DOMAIN="key-skylark-full.ngrok-free.app"
+```
+```
 kubectl apply -f - <<EOF
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -48,14 +51,14 @@ spec:
   rules:
     - host: $NGROK_DOMAIN
       http:
-      paths:
-        - path: /
-          pathType: Prefix
-          backend:
-          service:
-            name: game-2048
-            port:
-              number: 80
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+            service:
+              name: game-2048
+              port:
+                number: 80
 EOF
 ```
 
