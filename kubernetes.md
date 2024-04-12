@@ -28,13 +28,13 @@ spec:
     metadata:
       labels:
         app: game-2048
-      spec:
-        containers:
-          - name: backend
-            image: alexwhen/docker-2048
-            ports:
-            - name: http
-              containerPort: 80
+    spec:
+      containers:
+        - name: backend
+          image: alexwhen/docker-2048
+          ports:
+          - name: http
+            containerPort: 80
 EOF
 ```
 ```
