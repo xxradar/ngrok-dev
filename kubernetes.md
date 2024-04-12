@@ -55,10 +55,10 @@ spec:
           - path: /
             pathType: Prefix
             backend:
-            service:
-              name: game-2048
-              port:
-                number: 80
+              service:
+                name: game-2048
+                port:
+                  number: 80
 EOF
 ```
 
